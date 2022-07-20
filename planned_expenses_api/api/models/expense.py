@@ -1,6 +1,6 @@
 from django.core.validators import MinValueValidator
 from django.db import models
-from . import User, Periodicity, ExpenseType
+from planned_expenses_api.api.models import User, Periodicity, ExpenseType
 
 
 class Expense(models.Model):
@@ -8,7 +8,7 @@ class Expense(models.Model):
                                 on_delete=models.PROTECT,
                                 verbose_name='Usuário')
     name = models.CharField(max_length=155,
-                            verbose_name='Nome da despesa')
+                            verbose_name='Nome')
     expense_type = models.IntegerField(default=ExpenseType.EXPENSE,
                                        choices=ExpenseType.choices,
                                        verbose_name='Tipo de Despesa')
@@ -28,4 +28,3 @@ class Expense(models.Model):
 
     def __str__(self):
         return "{}".format(self.name)
-    

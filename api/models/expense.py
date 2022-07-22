@@ -1,6 +1,6 @@
 from django.core.validators import MinValueValidator
 from django.db import models
-from planned_expenses_api.api.models import User, Periodicity, ExpenseType
+from api.models import User, Periodicity, ExpenseType
 
 
 class Expense(models.Model):

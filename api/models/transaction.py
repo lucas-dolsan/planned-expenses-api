@@ -1,6 +1,6 @@
 from django.core.validators import MinValueValidator
 from django.db import models
-from planned_expenses_api.api.models import Expense, BankAccount, TransactionType, TransactionStatus
+from api.models import Expense, BankAccount, TransactionType, TransactionStatus
 
 
 class Transaction(models.Model):

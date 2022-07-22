@@ -30,4 +30,4 @@ class Transaction(models.Model):
         verbose_name = 'Banco'
 
     def __str__(self):
-        return self.name
+        return self.expanse.name

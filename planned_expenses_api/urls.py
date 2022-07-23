@@ -3,11 +3,12 @@ from django.shortcuts import redirect
 from django.urls import path, include
 from rest_framework import routers
 
-from api.views import UserViewSet, ExpenseViewSet, SwaggerSchemaView
+from api.views import UserViewSet, ExpenseViewSet, BankAccountViewSet, SwaggerSchemaView
 
 router = routers.DefaultRouter()
 router.register(r'user', UserViewSet)
 router.register(r'expense', ExpenseViewSet)
+router.register(r'bank-account', BankAccountViewSet)
 
 
 urlpatterns = [

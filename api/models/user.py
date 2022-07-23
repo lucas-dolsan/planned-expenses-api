@@ -15,6 +15,8 @@ class User(AbstractUser):
     name = models.CharField(max_length=155,
                             verbose_name='Nome do usuário')
     profile_image = models.URLField(default=None,
+                                    null=True,
+                                    blank=True,
                                     verbose_name='Imagem do perfil')
     is_staff = models.BooleanField(default=False,
                                    verbose_name='Membro admin')
